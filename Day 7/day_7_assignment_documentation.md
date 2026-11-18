@@ -5,49 +5,6 @@
 
 ---
 
-## Repository Structure
-
-```text
-├── Set1_Logistics_Shipment_Analysis/
-│   ├── schema_and_data.sql       # LogisticsDB schema & seed data
-│   ├── advanced_reports.sql      # 10 join queries, subqueries & nested subquery
-│   └── reports.js                # MongoDB $lookup pipelines for shipments, customers & carriers
-│
-├── Set2_Bank_Loan_Portfolio/
-│   ├── schema_and_data.sql       # BankLoanDB schema & seed data
-│   ├── advanced_reports.sql      # 10 join queries, correlated/uncorrelated subqueries, EXISTS/NOT EXISTS
-│   └── reports.js                # MongoDB $lookup pipelines including last repayment per loan
-│
-├── Set3_Retail_Returns_Refunds/
-│   ├── schema_and_data.sql       # RetailReturnsDB schema & seed data
-│   ├── advanced_reports.sql      # 10 join queries, NOT IN NULL pitfall & NOT EXISTS fix, ANY/ALL
-│   └── reports.js                # MongoDB $lookup pipelines on returns_feedback collection
-│
-└── README.md                     # Setup instructions & architectural notes across all 3 sets
-```
-
----
-
-## How to Run the Scripts
-
-### 1. SQL Server (SSMS)
-1. Open **SQL Server Management Studio (SSMS)** and connect to your local SQL Server instance.
-2. Open and execute `schema_and_data.sql` for the desired set to create the database (`LogisticsDB`, `BankLoanDB`, or `RetailReturnsDB`) and populate sample records.
-3. Open and execute `advanced_reports.sql` to view the output for all tasks.
-
-### 2. MongoDB (`mongosh`)
-1. Ensure your local MongoDB server (`mongod`) is running on the default port (`27017`).
-2. Run the corresponding `reports.js` file from your terminal:
-   ```bash
-   mongosh reports.js
-   ```
-   Or load it from inside an active `mongosh` session:
-   ```javascript
-   load("reports.js")
-   ```
-
----
-
 ## Set 1 – Logistics Shipment Analysis (`LogisticsDB`)
 
 ### Schema Overview
